@@ -1,82 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <title>Frontend Mentor | Tip calculator app</title>
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="logo-container">
-      <div class="logo"">
-        <img src="/images/logo.svg" alt="splitter-logo" />
-      </div>
-    </header>
-    <main>
-      <section class="card">
-        <div class="bill-container">
-					<label class="bill-label">Bill</label>
-					<!-- <div id="bill-input-wrapper">  -->
-						<input
-            type="text"
-            class="bill-cost-input"
-            min="1"
-						placeholder="0"
-            pattern="^[1-9]\d*(\.\d+)?$"
-          />
-					<!-- </div> -->
-        </div>
-        <div class="tip-container">
-					<div class="tip-label">Select Tip %</div>
-					<div class="tip-button-container">
-						<button>5%</button>
-						<button>10%</button>
-						<button>15%</button>
-						<button>25%</button>
-						<button>50%</button>
-						<button>Custom</button>
-					</div>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+	<title>Frontend Mentor | Tip calculator app</title>
+	<link rel="stylesheet" href="styles/styles.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+	<header class="logo-container">
+		<div class="logo"">
+        <img src=" /images/logo.svg" alt="splitter-logo" />
+		</div>
+	</header>
+	<main>
+		<section class="card">
+			<div class="bill-container">
+				<label class="bill-label">Bill</label>
+				<!-- <div id="bill-input-wrapper">  -->
+				<input type="text" class="bill-cost-input" min="1" placeholder="0" pattern="^[1-9]\d*(\.\d+)?$" />
+				<!-- </div> -->
+			</div>
+			<div class="tip-container">
+				<div class="tip-label">Select Tip %</div>
+				<div class="tip-button-container">
+					<button>5%</button>
+					<button>10%</button>
+					<button>15%</button>
+					<button>25%</button>
+					<button>50%</button>
+					<button>Custom</button>
 				</div>
-        <div class="people-container">
-					<div class="people-label">Number of People</div>
-					<input class="people-input"/>
-				</div>
-        <div class="total-container">
-					<div class="total-card">
-						<div class="total-element-container">
-							<div class="tip-amount-container">
-								<div class="tip-amount-label">
-									<p>Tip Amount</p>
-									<p>/ person</p>
-								</div>
-								<div class="tip-amount">$4.27</div>
-								<div class="tip-amount-label">
-									<p>Total</p>
-									<p>/ person</p>
-								</div>
-								<div class="tip-amount">$32.79</div>
+			</div>
+			<div class="people-container">
+				<div class="people-label">Number of People</div>
+				<input type="text" class="people-input" min="1" placeholder="0" class="people-input" />
+			</div>
+			<div class="total-container">
+				<div class="total-card">
+					<div class="total-element-container">
+						<div class="tip-amount-container">
+							<div class="tip-amount-label">
+								<p>Tip Amount</p>
+								<p>/ person</p>
 							</div>
-							<div class="reset-button-container">
-								<button>RESET</button>
+							<div class="tip-amount">$4.27</div>
+							<div class="tip-amount-label">
+								<p>Total</p>
+								<p>/ person</p>
 							</div>
+							<div class="tip-amount">$32.79</div>
+						</div>
+						<div class="reset-button-container">
+							<button>RESET</button>
 						</div>
 					</div>
 				</div>
-      </section>
-    </main>
-    <script src="./scripts/scripts.js"></script>
-  </body>
+			</div>
+		</section>
+	</main>
+	<script src="./scripts/scripts.js"></script>
+</body>
 </html>
