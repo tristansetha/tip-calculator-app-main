@@ -47,31 +47,31 @@ function handleCustomTipInput(e) {
 
 function handleTip(val) {
 	tipValue = parseFloat(val)
-	if(tipValue === 0.05){
+	if (tipValue === 0.05) {
 		btn5.classList.add("tip-button-selected")
 		btn10.classList.remove("tip-button-selected")
 		btn15.classList.remove("tip-button-selected")
 		btn25.classList.remove("tip-button-selected")
 		btn50.classList.remove("tip-button-selected")
-	} else if (tipValue === 0.10){
+	} else if (tipValue === 0.10) {
 		btn5.classList.remove("tip-button-selected")
 		btn10.classList.add("tip-button-selected")
 		btn15.classList.remove("tip-button-selected")
 		btn25.classList.remove("tip-button-selected")
 		btn50.classList.remove("tip-button-selected")
-	} else if(tipValue === 0.15){
+	} else if (tipValue === 0.15) {
 		btn5.classList.remove("tip-button-selected")
 		btn10.classList.remove("tip-button-selected")
 		btn15.classList.add("tip-button-selected")
 		btn25.classList.remove("tip-button-selected")
 		btn50.classList.remove("tip-button-selected")
-	} else if (tipValue === 0.25){
+	} else if (tipValue === 0.25) {
 		btn5.classList.remove("tip-button-selected")
 		btn10.classList.remove("tip-button-selected")
 		btn15.classList.remove("tip-button-selected")
 		btn25.classList.add("tip-button-selected")
 		btn50.classList.remove("tip-button-selected")
-	} else if (tipValue === 0.50){
+	} else if (tipValue === 0.50) {
 		btn5.classList.remove("tip-button-selected")
 		btn10.classList.remove("tip-button-selected")
 		btn15.classList.remove("tip-button-selected")
@@ -84,8 +84,6 @@ function handleTip(val) {
 		tipAmountElement.textContent = "$" + totalTipAmount.toFixed(2)
 		totalAmountElement.textContent = "$" + totaBillAmount.toFixed(2)
 	}
-	console.log(tipValue)
-
 }
 
 function handlePeopleValue(e) {
@@ -104,7 +102,6 @@ function handlePeopleValue(e) {
 }
 
 function handleReset() {
-	console.log("reset handler")
 	tipValue = ""
 	billValue = ""
 	peopleValue = ""
@@ -114,7 +111,6 @@ function handleReset() {
 	numberOfPeopleInput.value = ""
 	tipAmountElement.textContent = "$0.00"
 	totalAmountElement.textContent = "$0.00"
-	console.log(billValue)
 }
 
 
