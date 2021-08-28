@@ -3,7 +3,9 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 	<link <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 	<title>Frontend Mentor | Tip calculator app</title>
 	<link rel="stylesheet" href="styles/styles.css" />
@@ -15,53 +17,66 @@
 <body>
 	<header class="logo-container">
 		<div class="logo"">
-        <img src=" /images/logo.svg" alt="splitter-logo" />
+        <img id="logoImg" src=" /images/logo.svg" alt="splitter-logo" />
 		</div>
 	</header>
 	<main>
 		<section class="card">
-			<div class="bill-container">
-				<label class="bill-label">Bill</label>
-				<!-- <div id="bill-input-wrapper">  -->
-				<input type="text" class="bill-cost-input" min="1" placeholder="0" pattern="^[1-9]\d*(\.\d+)?$" />
-				<!-- </div> -->
-			</div>
-			<div class="tip-container">
-				<div class="tip-label">Select Tip %</div>
-				<div class="tip-button-container">
-					<button>5%</button>
-					<button>10%</button>
-					<button>15%</button>
-					<button>25%</button>
-					<button>50%</button>
-					<button>Custom</button>
+			<div class="card-elements-1">
+				<div class="bill-container">
+					<div class="bill-label-container">
+						<label class="bill-label">Bill</label>
+						<label id="bill-invalid-label" class="bill-invalid-label">Can't be zero</label>
+					</div>
+					<input type="number" id="bill-cost-input" class="bill-cost-input" min="1" placeholder="0"
+						pattern="^[1-9]\d*(\.\d+)?$" />
+				</div>
+				<div class="tip-container">
+					<div class="tip-label">Select Tip %</div>
+					<div class="tip-button-container">
+						<button class="tip-button" id="btn5" onclick="handleTip(0.05)">5%</button>
+						<button class="tip-button" id="btn10" onclick="handleTip(0.10)">10%</button>
+						<button class="tip-button" id="btn15" onclick="handleTip(0.15)">15%</button>
+						<button class="tip-button" id="btn25" onclick="handleTip(0.25)">25%</button>
+						<button class="tip-button" id="btn50" onclick="handleTip(0.50)">50%</button>
+						<!-- <button id="customInput">Custom</button> -->
+						<input type="number" min="0" placeholder="Custom" id="customTipInput" pattern="^[1-9]*$">
+					</div>
+				</div>
+				<div class="people-container">
+					<div class="people-label-container">
+						<label class="people-label">Number of People</label>
+						<label id="people-invalid-label" class="people-invalid-label">Can't be zero</label>
+
+					</div>
+					<input type="number" class="people-input" id="people-input" min="1" placeholder="0" class="people-input"
+						pattern="^[1-9]*$" />
 				</div>
 			</div>
-			<div class="people-container">
-				<div class="people-label">Number of People</div>
-				<input type="text" class="people-input" min="1" placeholder="0" class="people-input" pattern="[1-9]"/>
-			</div>
-			<div class="total-container">
-				<div class="total-card">
-					<div class="total-element-container">
-						<div class="tip-amount-container">
-							<div class="tip-amount-label">
-								<p>Tip Amount</p>
-								<p>/ person</p>
+			<div class="card-elements-2">
+				<div class="total-container">
+					<div class="total-card">
+						<div class="total-element-container">
+							<div class="tip-amount-container">
+								<div class="tip-amount-label">
+									<p>Tip Amount</p>
+									<p>/ person</p>
+								</div>
+								<div id="tip-amount" class="tip-amount">$0.00</div>
+								<div class="total-amount-label">
+									<p>Total</p>
+									<p>/ person</p>
+								</div>
+								<div id="total-amount" class="total-amount">$0.00</div>
 							</div>
-							<div class="tip-amount">$4.27</div>
-							<div class="tip-amount-label">
-								<p>Total</p>
-								<p>/ person</p>
+							<div class="reset-button-container">
+								<button id="btnReset" onclick="handleReset()">RESET</button>
 							</div>
-							<div class="tip-amount">$32.79</div>
-						</div>
-						<div class="reset-button-container">
-							<button>RESET</button>
 						</div>
 					</div>
 				</div>
 			</div>
+
 		</section>
 	</main>
 	<script src="./scripts/scripts.js"></script>
