@@ -42,7 +42,7 @@ body {
 /* MAIN */
 
 main {
-  height: 85%;
+  height: 86%;
   width: 100%;
   position: absolute;
   top: 15%;
@@ -57,15 +57,15 @@ main {
   border-radius: 22px 22px 0 0;
   display: flex;
   flex-direction: column;
-  width: 375px;
 }
 
 .card-elements-1 {
-  height: 484px;
+  height: 62%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  /* border: 5px solid pink; */
 }
 
 /* CARD ELEMENTS 1 */
@@ -73,10 +73,11 @@ main {
 .bill-container {
   display: flex;
   flex-direction: column;
-	justify-content: center;
+  justify-content: center;
   width: 100%;
   height: 25%;
   padding: 15px 30px 0 30px;
+  /* border: 1px solid lightcoral; */
 }
 
 .bill-cost-input {
@@ -101,7 +102,9 @@ main {
 }
 
 .bill-cost-input:hover {
-  border: 3px solid var(--light-grayish-cyan);
+  border: 4px solid var(--strong-cyan);
+	cursor: pointer;
+
 }
 
 .bill-label {
@@ -120,13 +123,14 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* border: 1px solid lightcoral; */
 }
 
 .tip-label {
   font-size: 15px;
   color: var(--dark-grayish-cyan);
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 5%;
 }
 
 .tip-button-container {
@@ -136,14 +140,19 @@ main {
 }
 
 .tip-button-container button {
-	height: 48px;
-	width: 146px;
+  height: 48px;
+  width: 146px;
   border-radius: 10px;
   border: none;
   background-color: var(--very-dark-cyan);
   color: var(--lighter-grayish-cyan);
   font-size: 21.5px;
   font-weight: 600;
+}
+
+.tip-button-container button:hover {
+	background-color: var(--strong-cyan);
+	cursor: pointer;
 }
 
 .tip-button-container button:last-child {
@@ -160,13 +169,14 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  /* border: 1px solid lightcoral; */
 }
 
 .people-label {
   color: var(--dark-grayish-cyan);
   font-size: 15px;
   font-weight: 700;
-	margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .people-input {
@@ -193,13 +203,15 @@ main {
 
 .people-input:hover {
   border: 3px solid var(--light-grayish-cyan);
+	border: 4px solid var(--strong-cyan);
+	cursor: pointer;
 }
 
 /*  CARD ELEMENTS 2 */
 /* TOTAL CONTAINER */
 
 .card-elements-2 {
-  height: 290px;
+  height: 38%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -230,21 +242,20 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   padding: 20px;
-	/* border: 3px solid red; */
-
+  /* border: 3px solid red; */
 }
 
 .tip-amount-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100%;
-	margin-top: 20px;
+  margin-top: 20px;
   row-gap: 30px;
-	/* border: 3px solid white; */
+  /* border: 3px solid white; */
 }
 
 .tip-amount-container > * {
-	/* border: 3px solid white;	 */
+  /* border: 3px solid white;	 */
 }
 
 .tip-amount-label p:first-child {
@@ -259,6 +270,24 @@ main {
 }
 
 .tip-amount {
+  color: var(--strong-cyan);
+  font-weight: 700;
+  font-size: 30px;
+  text-align: right;
+}
+
+.total-amount-label p:first-child {
+  font-size: 16px;
+  color: var(--lighter-grayish-cyan);
+  font-weight: 600;
+}
+.total-amount-label p:nth-child(2) {
+  font-size: 14px;
+  color: var(--dark-grayish-cyan);
+  font-weight: 500;
+}
+
+.total-amount {
   color: var(--strong-cyan);
   font-weight: 700;
   font-size: 30px;
@@ -294,23 +323,94 @@ main {
 }
 
 input:invalid {
-  border: 3px solid red;
+  border: 4px solid red;
 }
 
 /* RESPONSIVE DESKTOP */
 
+
 @media (min-width: 1440px) {
-  main {
-  }
   .card {
-    width: 920px;
-    height: 480;
+		width: 920px;
+		height: 480px;
+    /* width: 63%;
+    height: 47%; */
     display: flex;
     flex-direction: row;
+    border-radius: 22px 22px 22px 22px;
+
     /* grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr; */
   }
   .card > div {
     /* border: 5px solid pink; */
   }
+  .card-elements-1 {
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    /* border: 5px solid pink; */
+  }
+  .bill-container {
+    /* border: 1px solid red; */
+    padding: 35px 19px 0px 50px;
+  }
+  .tip-container {
+    /* border: 1px solid red; */
+    align-items: flex-start;
+    padding: 0px 19px 0px 50px;
+    /* justify-content: center; */
+  }
+  .tip-label {
+    width: 100%;
+    /* border: 5px solid blue; */
+  }
+  .tip-button-container {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    /* border: 1px solid red; */
+  }
+  .tip-button-container button {
+    width: 100%;
+    gap: 0px;
+  }
+  .people-container {
+    padding: 0px 19px 0px 50px;
+
+    /* border: 5px solid pink; */
+  }
+  .card-elements-2 {
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+  }
+  .total-container {
+    padding: 25px 25px 25px 25px;
+    /* border: 5px solid blue; */
+  }
+  .total-card {
+    /* border: 5px solid red; */
+  }
+  .total-card > * {
+    /* border: 5px solid red; */
+  }
+
+  .total-element-container {
+    padding: 45px 40px 25px 40px;
+		/* border: 5px solid red; */
+
+  }
+  .tip-amount-container {
+    /* margin-top: 30px; */
+    /* border: 5px solid red; */
+  }
+
+	.reset-button-container{
+		align-items: flex-end;
+		padding-bottom: 10px;
+	}
+
+	.reset-button-container button {
+		width: 100%;
+	}
 }
