@@ -48,7 +48,8 @@ mobile (iphone x)        |  desktop
 
 ### What I learned
 
-The difference between chrome inspector tool responsive devices vs shrinking the actual browser window
+avoid using complex css selectors too avoid   
+plan out containers for both mobile and desktop in mind
 
 ### Continued development
 
