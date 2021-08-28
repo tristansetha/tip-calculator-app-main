@@ -77,6 +77,12 @@ function handleTip(val) {
 		btn15.classList.remove("tip-button-selected")
 		btn25.classList.remove("tip-button-selected")
 		btn50.classList.add("tip-button-selected")
+	} else {
+		btn5.classList.remove("tip-button-selected")
+		btn10.classList.remove("tip-button-selected")
+		btn15.classList.remove("tip-button-selected")
+		btn25.classList.remove("tip-button-selected")
+		btn50.classList.remove("tip-button-selected")	
 	}
 	if (billValue && tipValue && peopleValue) {
 		totalTipAmount = (tipValue * billValue) / peopleValue
