@@ -24,25 +24,33 @@
 		<section class="card">
 			<div class="card-elements-1">
 				<div class="bill-container">
-					<label class="bill-label">Bill</label>
-					<input type="text" id="bill-cost-input" class="bill-cost-input" min="1" placeholder="0"
+					<div class="bill-label-container">
+						<label class="bill-label">Bill</label>
+						<label id="bill-invalid-label" class="bill-invalid-label">Can't be zero</label>
+					</div>
+					<input type="number" id="bill-cost-input" class="bill-cost-input" min="1" placeholder="0"
 						pattern="^[1-9]\d*(\.\d+)?$" />
 				</div>
 				<div class="tip-container">
 					<div class="tip-label">Select Tip %</div>
 					<div class="tip-button-container">
-						<button id="btn5" onclick="handleTip(0.05)">5%</button>
-						<button id="btn10" onclick="handleTip(0.10)">10%</button>
-						<button id="btn15" onclick="handleTip(0.15)">15%</button>
-						<button id="btn25" onclick="handleTip(0.25)">25%</button>
-						<button id="btn50" onclick="handleTip(0.50)">50%</button>
-						<button id="btnCustom">Custom</button>
+						<button class="tip-button" id="btn5" onclick="handleTip(0.05)">5%</button>
+						<button class="tip-button" id="btn10" onclick="handleTip(0.10)">10%</button>
+						<button class="tip-button" id="btn15" onclick="handleTip(0.15)">15%</button>
+						<button class="tip-button" id="btn25" onclick="handleTip(0.25)">25%</button>
+						<button class="tip-button" id="btn50" onclick="handleTip(0.50)">50%</button>
+						<!-- <button id="customInput">Custom</button> -->
+						<input type="number" min="0" placeholder="Custom" id="customTipInput" pattern="^[1-9]*$">
 					</div>
 				</div>
 				<div class="people-container">
-					<div class="people-label">Number of People</div>
-					<input type="text" class="people-input" id="people-input" min="1" placeholder="0" class="people-input"
-						pattern="[1-9]" />
+					<div class="people-label-container">
+						<label class="people-label">Number of People</label>
+						<label id="people-invalid-label" class="people-invalid-label">Can't be zero</label>
+
+					</div>
+					<input type="number" class="people-input" id="people-input" min="1" placeholder="0" class="people-input"
+						pattern="^[1-9]*$" />
 				</div>
 			</div>
 			<div class="card-elements-2">
