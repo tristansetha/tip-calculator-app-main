@@ -110,6 +110,7 @@ main {
 .bill-label-container {
   position: relative;
   height: 1.5em;
+  margin-bottom: 10px;
 }
 
 .bill-label {
@@ -156,8 +157,8 @@ main {
 
 .tip-button {
   height: 48px;
-  width: 146px;
-  border-radius: 10px;
+  width: 100%;
+  border-radius: 4.5px;
   border: none;
   background-color: var(--very-dark-cyan);
   color: var(--lighter-grayish-cyan);
@@ -167,7 +168,7 @@ main {
 
 #customTipInput {
   height: 48px;
-  width: 146px;
+  width: 150px;
   border-radius: 10px;
   border: none;
   background-color: var(--lighter-grayish-cyan);
@@ -215,6 +216,9 @@ main {
 .people-label-container {
   position: relative;
   height: 1.5em;
+  margin-bottom: 10px;
+
+  /* border:3px solid red; */
 }
 
 .people-label {
@@ -390,7 +394,6 @@ input:invalid {
   display: block;
 }
 
-
 /* Properties for screens larger than 1440px */
 @media (min-width: 1440px) {
   .card {
@@ -409,9 +412,19 @@ input:invalid {
   .bill-container {
     padding: 35px 19px 0px 50px;
   }
+  .bill-cost-input {
+    height: 45px;
+  }
+  .bill-label-container {
+    margin-bottom: 10px;
+  }
+  .bill-label {
+    justify-content: flex-start;
+  }
   .tip-container {
     align-items: flex-start;
     padding: 0px 19px 0px 50px;
+    height: 45%;
   }
   .tip-label {
     width: 100%;
@@ -420,12 +433,21 @@ input:invalid {
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
   }
-  .tip-button-container button {
-    width: 100%;
+  .tip-button {
+    width: 125px;
     gap: 0px;
+  }
+  #customTipInput {
+    width: 125px;
   }
   .people-container {
     padding: 0px 19px 0px 50px;
+  }
+  .people-label-container {
+    margin-bottom: 10px;
+  }
+  .people-input {
+    height: 45px;
   }
   .card-elements-2 {
     justify-content: center;
@@ -435,6 +457,12 @@ input:invalid {
   .total-container {
     padding: 25px 25px 25px 25px;
   }
+  .tip-amount {
+    font-size: 40px;
+  }
+  .total-amount {
+    font-size: 40px;
+  }
   .total-element-container {
     padding: 45px 40px 25px 40px;
   }
@@ -442,8 +470,7 @@ input:invalid {
     align-items: flex-end;
     padding-bottom: 10px;
   }
-
-  .reset-button-container button {
+  #btnReset {
     width: 100%;
   }
 }
