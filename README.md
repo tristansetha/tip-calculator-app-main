@@ -48,8 +48,8 @@ mobile (iphone x)        |  desktop
 
 ### What I learned
 
-avoid using complex css selectors too avoid   
-plan out containers for both mobile and desktop in mind
+avoid using complex css selectors 
+plan out containers for both mobile and desktop
 
 ### Continued development
 
