@@ -108,6 +108,11 @@ function handlePeopleValue(e) {
 }
 
 function handleReset() {
+	btn5.classList.remove("tip-button-selected")
+	btn10.classList.remove("tip-button-selected")
+	btn15.classList.remove("tip-button-selected")
+	btn25.classList.remove("tip-button-selected")
+	btn50.classList.remove("tip-button-selected")	
 	tipValue = ""
 	billValue = ""
 	peopleValue = ""
