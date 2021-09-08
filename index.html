@@ -2,79 +2,79 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-	<title>Frontend Mentor | Tip calculator app</title>
-	<link rel="stylesheet" href="styles/styles.css" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-	<header class="logo-container">
-		<div class="logo">
-			<h1><img id="logoImg" src="images/logo.svg" alt="splitter-logo" />
-			</h1>
-		</div>
-	</header>
-	<main>
-		<section class="card">
-			<div class="card-elements-1">
-				<div class="bill-container">
-					<div class="bill-label-container">
-						<h2><label class="bill-label">Bill</label></h2>
-						<label id="bill-invalid-label" class="bill-invalid-label">Can't be zero</label>
-					</div>
-					<input type="number" id="bill-cost-input" class="bill-cost-input" min="1" placeholder="0">
-				</div>
-				<div class="tip-container">
-					<div class="tip-label">Select Tip %</div>
-					<div class="tip-button-container">
-						<button class="tip-button" id="btn5" onclick="handleTip(0.05)">5%</button>
-						<button class="tip-button" id="btn10" onclick="handleTip(0.10)">10%</button>
-						<button class="tip-button" id="btn15" onclick="handleTip(0.15)">15%</button>
-						<button class="tip-button" id="btn25" onclick="handleTip(0.25)">25%</button>
-						<button class="tip-button" id="btn50" onclick="handleTip(0.50)">50%</button>
-						<input type="number" min="0" placeholder="Custom" id="customTipInput">
-					</div>
-				</div>
-				<div class="people-container">
-					<div class="people-label-container">
-						<label class="people-label">Number of People</label>
-						<label id="people-invalid-label" class="people-invalid-label">Can't be zero</label>
-					</div>
-					<input type="number" class="people-input" id="people-input" min="1" placeholder="0" class="people-input">
-				</div>
-			</div>
-			<div class="card-elements-2">
-				<div class="total-container">
-					<div class="total-card">
-						<div class="total-element-container">
-							<div class="tip-amount-container">
-								<div class="tip-amount-label">
-									<p>Tip Amount</p>
-									<p>/ person</p>
-								</div>
-								<div id="tip-amount" class="tip-amount">$0.00</div>
-								<div class="total-amount-label">
-									<p>Total</p>
-									<p>/ person</p>
-								</div>
-								<div id="total-amount" class="total-amount">$0.00</div>
-							</div>
-							<div class="reset-button-container">
-								<button id="btnReset" onclick="handleReset()">RESET</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+  <header class="logo-container">
+    <div class="logo">
+      <h1><img id="logoImg" src="images/logo.svg" alt="splitter-logo" />
+      </h1>
+    </div>
+  </header>
+  <main>
+    <section class="card">
+      <div class="card-elements-1">
+        <div class="bill-container">
+          <div class="bill-label-container">
+            <h2><label class="bill-label">Bill</label></h2>
+            <label id="bill-invalid-label" class="bill-invalid-label">Can't be zero</label>
+          </div>
+          <input type="number" id="bill-cost-input" class="bill-cost-input" min="1" placeholder="0">
+        </div>
+        <div class="tip-container">
+          <div class="tip-label">Select Tip %</div>
+          <div class="tip-button-container">
+            <button class="tip-button" id="btn5" onclick="handleTip(0.05)">5%</button>
+            <button class="tip-button" id="btn10" onclick="handleTip(0.10)">10%</button>
+            <button class="tip-button" id="btn15" onclick="handleTip(0.15)">15%</button>
+            <button class="tip-button" id="btn25" onclick="handleTip(0.25)">25%</button>
+            <button class="tip-button" id="btn50" onclick="handleTip(0.50)">50%</button>
+            <input type="number" min="0" placeholder="Custom" id="customTipInput">
+          </div>
+        </div>
+        <div class="people-container">
+          <div class="people-label-container">
+            <label class="people-label">Number of People</label>
+            <label id="people-invalid-label" class="people-invalid-label">Can't be zero</label>
+          </div>
+          <input type="number" class="people-input" id="people-input" min="1" placeholder="0" class="people-input">
+        </div>
+      </div>
+      <div class="card-elements-2">
+        <div class="total-container">
+          <div class="total-card">
+            <div class="total-element-container">
+              <div class="tip-amount-container">
+                <div class="tip-amount-label">
+                  <p>Tip Amount</p>
+                  <p>/ person</p>
+                </div>
+                <div id="tip-amount" class="tip-amount">$0.00</div>
+                <div class="total-amount-label">
+                  <p>Total</p>
+                  <p>/ person</p>
+                </div>
+                <div id="total-amount" class="total-amount">$0.00</div>
+              </div>
+              <div class="reset-button-container">
+                <button id="btnReset" onclick="handleReset()">RESET</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-		</section>
-	</main>
-	<script src="scripts/scripts.js"></script>
+    </section>
+  </main>
+  <script src="scripts/scripts.js"></script>
 </body>
 
 </html>
