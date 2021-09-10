@@ -36,7 +36,7 @@ mobile (iphone x)        |  desktop
 
 ### Links
 
-- Live Site URL: [Live Site](https://ttttristan.github.io/tip-calculator-app-main)
+- Live Site URL: [Live Site](https://tristansetha.github.io/tip-calculator-app-main)
 
 ### Built with
 
